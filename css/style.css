@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Rubik Mono One', sans-serif;
+html {
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
-.contain-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Generics */
+body {
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 h1 {
@@ -21,9 +21,55 @@ h1 {
     font-size: 50px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Navbar */
+.side-menu {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    z-index: 1;
+}
+
+.side-menu a:hover {
+    color: dodgerblue;
+    background-color: purple;
+    scale: 1.5;
+}
+
+.side-menu a:active {
+    scale: 0.8;
+}
+
+/* Main */
 .container {
     max-width: 800px;
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sec-page {
+    position: relative;
 }
 
 .yel {
@@ -44,9 +90,4 @@ h1 {
 
 #converse {
     background-color: yellow;
-}
-
-/* Main */
-section {
-    height: 100vh;
 }
